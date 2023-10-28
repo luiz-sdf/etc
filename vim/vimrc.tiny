@@ -1,0 +1,34 @@
+" Vim configuration file, in effect when invoked as "vi". The aim of this
+" configuration file is to provide a Vim environment as compatible with the
+" original vi as possible. Note that ~/.vimrc configuration files as other
+" configuration files in the runtimepath are still sourced.
+" When Vim is invoked differently ("vim", "view", "evim", ...) this file is
+" _not_ sourced; /etc/vim/vimrc and/or /etc/vim/gvimrc are.
+
+" Debian system-wide default configuration Vim
+set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim90,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+
+set compatible
+set autoindent
+set copyindent
+set expandtab
+set ignorecase
+set nowrap
+set shiftwidth=4
+set smartcase
+set smarttab
+set softtabstop=4
+set splitbelow
+set splitright
+set smartindent
+set tabstop=4
+set nowritebackup
+set ruler
+set mouse=a
+set nobackup
+set nowritebackup
+set noswapfile
+set showmode
+set hidden
+
+" vim: set ft=vim:

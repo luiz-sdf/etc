@@ -1,0 +1,77 @@
+set $mod Mod4
+set $fg #babdb6
+set $bg #000000
+set $bd #eeeeec
+gaps inner 10
+smart_gaps on
+smart_borders on
+font "Fira Code 10"
+title_align center
+default_border pixel 2
+output * bg /home/user/.config/sway/wallpaper.png fill
+input * xkb_options compose:ralt,altwin:menu_win
+client.focused $fg $fg $bg $bd
+client.focused_inactive $bg $bg $fg $bg $bg
+client.unfocused $bg $bg $fg $bg $bg
+for_window [app_id=".*"] inhibit_idle fullscreen
+for_window [app_id="vlc"] inhibit_idle open
+exec swayidle -w timeout 60 'swaylock -fc 000000'
+xwayland enabled
+
+floating_modifier $mod normal
+bindsym $mod+Return exec foot
+bindsym $mod+w exec firefox
+bindsym $mod+o exec vlc
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym $mod+q kill
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+q exit
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Control+l resize grow width 10px
+bindsym $mod+Control+j resize shrink height 10px
+bindsym $mod+Control+k resize grow height 10px
+bindsym $mod+Control+h resize shrink width 10px
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+
+bindsym $mod+v splith
+bindsym $mod+s splitv
+bindsym $mod+t layout toggle split
+bindsym $mod+m layout tabbed
+bindsym $mod+Shift+0 sticky toggle
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+include /etc/sway/config.d/*
