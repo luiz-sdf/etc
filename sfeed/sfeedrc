@@ -1,0 +1,43 @@
+#!/bin/sh
+
+feeds() {
+    feed "Anna's Archive" 'https://annas-blog.org/rss.xml'
+    feed 'Ars Technica' 'https://feeds.arstechnica.com/arstechnica/index'
+    feed 'Bruce Schneier' 'https://www.schneier.com/feed/atom'
+    feed 'Coda Hale' 'https://codahale.com/atom.xml'
+    feed 'Daniel J. Bernstein' 'https://blog.cr.yp.to/feed.application=xml'
+    feed 'David Leadbeater' 'https://dgl.cx/feed'
+    feed 'Debian Security Advisories' 'https://www.debian.org/security/dsa-long'
+    feed 'Dark Reading' 'https://www.darkreading.com/rss.xml'
+    feed 'ExplainingComputers' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCbiGcwDWZjz05njNPrJU7jA'
+    feed 'Filippo Valsorda' 'https://words.filippo.io/rss/'
+    feed 'Gary Ruddell' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCEahRMjdsR_6cwVc49p2ZkA'
+    feed 'Graham Cluley' 'https://grahamcluley.com/feed/'
+    feed 'Hiltjo Posthuma' 'http://codemadness.org/rss.xml'
+    feed 'Have I Been Pwned' 'https://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches'
+    feed 'IntelTechniques' 'https://inteltechniques.com/blog/feed/'
+    feed 'Keccak Team' 'https://keccak.team/news.atom'
+    feed 'Lobsters' 'https://lobste.rs/rss'
+    feed 'Loup Vaillant' 'https://loup-vaillant.fr/updates'
+    feed 'Krebs on Security' 'https://krebsonsecurity.com/feed/'
+    feed 'Matthew Green' 'https://blog.cryptographyengineering.com/feed/'
+    feed 'Nate Lawson' 'https://rdist.root.org/feed/'
+    feed 'Monero' 'https://www.getmonero.org/feed.xml'
+    feed 'Mullvad' 'https://mullvad.net/en/blog/feed/atom/'
+    feed 'Raspberry Pi' 'https://www.raspberrypi.com/news/feed/'
+    feed 'SafetyDetectives' 'https://www.safetydetectives.com/feed/'
+    feed 'Sector035' 'https://sector035.nl/articles.rss'
+    feed 'Tails' 'https://tails.boum.org/news/index.en.rss'
+    feed 'The Hacker News' 'https://thehackernews.com/feeds/posts/default'
+    feed 'Tonsky' 'https://tonsky.me/blog/atom.xml'
+    feed 'Tor' 'https://blog.torproject.org/feed.xml'
+    feed 'TorrentFreak' 'https://torrentfreak.com/feed/'
+    feed 'Wikinews' 'https://pt.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom&hideredirs=1&limit=75&namespace=0&size=0&categories=Publicado'
+    feed 'Wired AI' 'https://www.wired.com/feed/tag/ai/latest/rss'
+    feed 'Wired Science' 'https://www.wired.com/feed/category/science/latest/rss'
+    feed 'Wired Security' 'https://www.wired.com/feed/category/security/latest/rss'
+}
+
+fetch() {
+    /usr/bin/curl -fsLm 15 "$2" || exit 1
+}
