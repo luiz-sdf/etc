@@ -3,7 +3,9 @@
 feeds() {
     feed "Anna's Archive" 'https://annas-blog.org/rss.xml'
     feed 'Ars Technica' 'https://feeds.arstechnica.com/arstechnica/index'
+    feed 'Bite Code!' 'https://www.bitecode.dev/feed'
     feed 'Bruce Schneier' 'https://www.schneier.com/feed/atom'
+    feed 'Cloudflare Blog' 'https://blog.cloudflare.com/rss/'
     feed 'Coda Hale' 'https://codahale.com/atom.xml'
     feed 'Daniel J. Bernstein' 'https://blog.cr.yp.to/feed.application=xml'
     feed 'David Leadbeater' 'https://dgl.cx/feed'
@@ -27,7 +29,6 @@ feeds() {
     feed 'Raspberry Pi' 'https://www.raspberrypi.com/news/feed/'
     feed 'SafetyDetectives' 'https://www.safetydetectives.com/feed/'
     feed 'Sector035' 'https://sector035.nl/articles.rss'
-    feed 'Tails' 'https://tails.boum.org/news/index.en.rss'
     feed 'The Hacker News' 'https://thehackernews.com/feeds/posts/default'
     feed 'The Verge' 'https://www.theverge.com/rss/index.xml'
     feed 'Tonsky' 'https://tonsky.me/blog/atom.xml'

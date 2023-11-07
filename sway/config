@@ -14,7 +14,8 @@ client.focused $fg $fg $bg $bd
 client.focused_inactive $bg $bg $fg $bg $bg
 client.unfocused $bg $bg $fg $bg $bg
 for_window [app_id=".*"] inhibit_idle fullscreen
-for_window [app_id="vlc"] inhibit_idle open
+for_window [app_id="vlc"] inhibit_idle visible
+for_window [app_id="vlc"] floating enabled
 exec swayidle -w timeout 60 'swaylock -fc 000000'
 xwayland enabled
 
@@ -28,6 +29,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym Print exec grimshot copy
 bindsym $mod+q kill
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+q exit
